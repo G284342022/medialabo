@@ -199,5 +199,5 @@ let data = {
   }
 };
 
-console.log('')
+console.log(data.access);
 
