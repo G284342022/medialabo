@@ -15,9 +15,9 @@ let data = [
 
 // 練習4-2 メッセージ追加プログラム
 let p1 = document.querySelector('h2#ex42');
-let p2 = document.createElement('p2');
-p2.textContent = '<p style="text-emphasis: sesame green;">写真表と都市の緯度軽度のページです</p>';
-p2.insertAdjacentElement('afterend',h2);
+let p = document.createElement('p');
+p.textContent = '<p style="text-emphasis: sesame green;">写真表と都市の緯度軽度のページです</p>';
+h2.insertAdjacentElement('afterend',h2);
 // 練習4-3 写真表作成プログラム
 
 
