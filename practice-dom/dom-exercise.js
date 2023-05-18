@@ -20,7 +20,16 @@ p1.textContent = '写真表と都市の緯度軽度のページです';
 p1.style.textEmphasis = 'sesame green';
 h2.insertAdjacentElement('afterend',p1);
 // 練習4-3 写真表作成プログラム
-let im = document.elementFromPoint('img');
+let st = ["taro.png","jiro.png","hanako.png"];
+let dp = document.querySelector('div#phototable')
+
+for(let student of st) {
+	let img = document.createElement('img');
+	img.setAttribute('src',student);
+	let p2 = document.createElement('p');
+	p2.insertAdjacentElement('beforeend',img);
+	dp.insertAdjacentElement('beforeend',p2);
+}
 
 // 練習4-4 箇条書き削除プログラム
 
