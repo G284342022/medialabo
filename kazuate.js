@@ -18,18 +18,24 @@ function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   let kazu = document.querySelector('input[name="seisu"]');
   let yoso = kazu.value;
+  let kai = Math.floor(yoso);
+  let an = document.querySelector('span#answer');
+  an.textContent = kai;
+  let me = document.querySelector('span#kaisu');
   kaisu = kaisu + 1;
-  pi.textContent = kaisu + '回目の予想:' + yoso;
+  me.textContent = kaisu;
+
+  pi.textContent = kaisu + '回目の予想:' + kai;
   if (kaisu < 3) {
-    if(yoso === kotae) {
+    if(kai === kotae) {
     pi.textContent = '正解です.おめでとう！';
-    }else if (yoso < kotae) {
+    }else if (kai < kotae) {
       pi.textContent = '間違い. 答えはもっと大きいですよ';
     }else {
       pi.textContent = '間違い.答えはもっと小さいですよ';
     }
   }else if (kaisu === 3) {
-    if(yoso === kotae) {
+    if(kai === kotae) {
         pi.textContent = '正解です.おめでとう！';
         }else {
           pi.textContent = '間違い. 残念でした 答えは ' + kotae + 'です';
