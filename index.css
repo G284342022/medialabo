@@ -4,12 +4,11 @@ h1 {
 }
 h2 {
     color:rgb(0, 62, 248);
-    background-color:rgba(11, 149, 6, 0.502);
 }
 h3{
     color:darkblue;
-    background-color: rgba(74, 180, 70, 0.629);
 }
 html {
     font-family: cursive;
+    background-color: rgba(11, 149, 6, 0.502);
 }
