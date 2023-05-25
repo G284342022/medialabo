@@ -1,6 +1,6 @@
 h1 {
     color: greenyellow;
-    background-color: #4a6f9e;
+    background-color: navy;
 }
 h2 {
     color:rgb(0, 62, 248);
@@ -9,6 +9,7 @@ h3{
     color:darkblue;
 }
 html {
+    font-size: 1.3em;
     font-family: cursive;
-    background-color: rgba(11, 149, 6, 0.502);
+    background-color:skyblue;
 }
