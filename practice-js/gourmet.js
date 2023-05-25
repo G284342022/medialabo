@@ -197,7 +197,11 @@ let data = {
       }
     ]
   }
-};
+}
+let g = document.querySelector('script');
+g.addEventListener('text',grugru);
 
-console.log(data.address);
+function grugru() {
+  let h = 
+}
 
