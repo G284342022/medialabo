@@ -202,6 +202,7 @@ let g = document.querySelector('button#keka');
 g.addEventListener('click',grugru);
 
 function grugru() {
-  let h = 
+  let h = document.querySelector('input[name="si"]');
+  
 }
 
