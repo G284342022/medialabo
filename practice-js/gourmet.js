@@ -198,8 +198,8 @@ let data = {
     ]
   }
 }
-let g = document.querySelector('script');
-g.addEventListener('text',grugru);
+let g = document.querySelector('button#keka');
+g.addEventListener('click',grugru);
 
 function grugru() {
   let h = 
