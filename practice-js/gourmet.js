@@ -205,9 +205,8 @@ function grugru() {
   let h = document.querySelector('input[name="si"]');
   
 }
-let b = document.querySelector('#sendRequest');
-b.addEventListener('click', sendRequest);
-
+let b = document.querySelector('#keka');
+b.addEventListener('click', keka);
 
 // 通信を開始する処理
 function sendRequest() {
@@ -220,7 +219,6 @@ function sendRequest() {
         .catch(showError)   // 通信失敗
         .then(finish);      // 通信の最後の処理
 }
-
 // 通信が成功した時の処理
 function showResult(resp) {
     // サーバから送られてきたデータを出力
