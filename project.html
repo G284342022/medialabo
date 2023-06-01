@@ -11,17 +11,27 @@
     <p>
         <form>
             <div>
-                <label for="kensaku">ジャンルを検索</label>
-                <input type="search" name="site" id="kensaku" size="10" placeholder="ジャンルを入力..."/>
-                <input list="li" id="list" name="lili">
-                <datalist id="li">
-                    <option value="izakaya">
-                    <option value="daininngu">
-                    <option value="sousaku">
-                    <option value="wa">
-                    <option value="you"> 
-                        
-                </datalist>
+                <label for="kensaku">ジャンルを選択</label>
+                <select name="jyanru" id="jyanru-select" >
+                    <option value="">ジャンルを決めてね！</option>
+                    <option value="izakaya">居酒屋</option>
+                    <option value="dainingu">ダイニングバー・バル</option>
+                    <optoin value="sousaku">創作料理</optoin>
+                    <optoin value="wa">和食</optoin>
+                    <optoin value="you">洋食</optoin>
+                    <optoin value="itarian">イタリアン・フレンチ</optoin>
+                    <optoin value="tyuka">中華</optoin>
+                    <optoin value="yakiniku">焼肉</optoin>
+                    <optoin value="ajia">アジア・エスニック</optoin>
+                    <optoin value="kakoku">各国料理</optoin>
+                    <optoin value="karaoke">カラオケ・パーティ</optoin>
+                    <optoin value="ba-">バー・カクテル</optoin>
+                    <optoin value="ra-men">ラーメン</optoin>
+                    <optoin value="kafe">カフェ・スイーツ</optoin>
+                    <optoin value="sonota">その他グルメ</optoin>
+                    <optoin value="okonomiyaki">お好み焼き・もんじゃ</optoin>
+                    <optoin value="kannkoku">韓国料理</optoin>
+                </select>
                 <button id ="keka">Seach</button></p>
             </div>
         </form>
