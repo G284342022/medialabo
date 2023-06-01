@@ -198,7 +198,7 @@ let data = {
     ]
   }
 }
-let b = document.querySelector('button#keka');
+let b = document.querySelector('#keka');
 b.addEventListener('click',keka);
   
 
