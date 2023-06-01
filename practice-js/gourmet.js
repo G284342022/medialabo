@@ -203,7 +203,7 @@ b.addEventListener('click',keka);
   
 
 // 通信を開始する処理
-function sendRequest() {
+function keka() {
     // URL を設定
     let url1 = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json';
     let url7 = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G007.json';
