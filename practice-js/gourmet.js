@@ -212,8 +212,8 @@ b.addEventListener('click', sendRequest);
 // 通信を開始する処理
 function sendRequest() {
     // URL を設定
-    let url = 'https://www.nishita-lab.org/web-contents/jsons/test.json';
-
+    let url6 = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0006.json';
+    let url7 = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G007.json';
     // 通信開始
     axios.get(url)
         .then(showResult)   // 通信成功
