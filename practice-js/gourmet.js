@@ -205,7 +205,7 @@ b.addEventListener('click',keka);
 // 通信を開始する処理
 function keka() {
   let A = document.querySelectorAll('#option');
-  A.
+  
     // URL を設定
     let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json';
     // 通信開始
