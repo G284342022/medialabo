@@ -198,15 +198,9 @@ let data = {
     ]
   }
 }
-let g = document.querySelector('button#keka');
-g.addEventListener('click',grugru);
-
-function grugru() {
-  let h = document.querySelector('input[name="si"]');
+let b = document.querySelector('button#keka');
+b.addEventListener('click',keka);
   
-}
-let b = document.querySelector('#keka');
-b.addEventListener('click', keka);
 
 // 通信を開始する処理
 function sendRequest() {
