@@ -205,10 +205,10 @@ b.addEventListener('click',keka);
 // 通信を開始する処理
 function sendRequest() {
     // URL を設定
-    let url6 = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0006.json';
+    let url1 = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json';
     let url7 = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G007.json';
     // 通信開始
-    axios.get(url)
+    axios.get(url1)
         .then(showResult)   // 通信成功
         .catch(showError)   // 通信失敗
         .then(finish);      // 通信の最後の処理
