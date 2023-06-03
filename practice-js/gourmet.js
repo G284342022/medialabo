@@ -199,11 +199,20 @@ let data = {
   }
 }
 let b = document.querySelector('#keka');
-b.addEventListener('click',keka);
+b.addEventListener('click',selectRe);
   
 
 // 通信を開始する処理
-function keka() {
+function selectRe() {
+  let s = document.querySelector('select#sjyanru');
+    let idx = s.selectedIndex;  // idx 番目の option が選択された
+
+    let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
+    let o = os.item(idx);       // os の idx 番目の要素
+
+    console.log('選択された ' + idx + ' 番目の option の情報:');
+    console.log('  value=' + o.getAttribute('value'));  // id 属性を表示
+    console.log('  textContent='+o.textContent);
   let A = document.querySelectorAll('#option');
   
     // URL を設定
