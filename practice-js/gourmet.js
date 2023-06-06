@@ -232,8 +232,9 @@ function showResult(resp)
   let pi = document.querySelector('#keka');
   let n;
   for(n of data.results) {
+    console.log(n);
   }
-  for(let m of n.buildingD) {
+  for(let m of n.shop) {
     console.log(m.access);
   pi.textContent(data.results);
     // サーバから送られてきたデータを出力
