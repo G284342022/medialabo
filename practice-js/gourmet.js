@@ -221,13 +221,10 @@ function selectRe() {
     }else {
       url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0' + idx + '.json';
     }
-    let n;
-  for(n of data.results) {
+  for(let n of data.results.shop) {
     console.log(n);
   }
-  for(let m of n.shop) {
-    console.log(m.access);
-  }
+  
     // 通信開始
     axios.get(url)
         .then(showResult)   // 通信成功
