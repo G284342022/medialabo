@@ -216,7 +216,11 @@ function selectRe() {
   let A = document.querySelectorAll('#option');
   
     // URL を設定
-    let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json';
+    if (idx < 10) {
+      let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G00' + idx + '.json';
+    }else {
+      let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0' + idx + '.json';
+    }
     // 通信開始
     axios.get(url)
         .then(showResult)   // 通信成功
@@ -224,7 +228,14 @@ function selectRe() {
         .then(finish);      // 通信の最後の処理
 }
 // 通信が成功した時の処理
-function showResult(resp) {
+function showResult(resp) 
+  let pi = document.querySelector('#keka');
+  let n;
+  for(n of data.results) {
+  }
+  for(let m of n.buildingD) {
+    console.log(m.access);
+  pi.textContent(data.results);
     // サーバから送られてきたデータを出力
     let data = resp.data;
 
