@@ -204,7 +204,7 @@ b.addEventListener('click',selectRe);
 
 // 通信を開始する処理
 function selectRe() {
-  let s = document.querySelector('select#sjyanru');
+  let s = document.querySelector('select#jyanru');
     let idx = s.selectedIndex;  // idx 番目の option が選択された
 
     let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
