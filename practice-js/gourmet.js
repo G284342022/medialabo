@@ -223,11 +223,15 @@ function selectRe() {
     }
     let pi = document.querySelector('#syousai');
     for(let n of data.results.shop) {
-      pi.textContent = (n.name);
-      pi.textContent = (n.access);
-      pi.textContent = (n.address);
-      pi.textContent = (n.open);
-      pi.textContent = (n.station_name);
+      pi.textContent = n.access;
+      pi.textContent = n.address;
+      pi.textContent = n.budget.name;
+      pi.textContent = n.catch;
+      pi.textContent = n.genre.name;
+      pi.textContent = n.name;
+      pi.textContent = n.open;
+      pi.textContent = n.station_name;
+      pi.textContent = n.sub_genre.name;
     }
   
   
