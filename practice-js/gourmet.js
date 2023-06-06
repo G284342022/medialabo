@@ -221,14 +221,15 @@ function selectRe() {
     }else {
       url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0' + idx + '.json';
     }
-  for(let n of data.results.shop) {
-    console.log(n.name);
-    console.log(n.access);
-    console.log(n.address);
-    console.log(n.open);
-    console.log(n.station_name);
-  }
-  let pi = document.querySelector('#keka');
+    let pi = document.querySelector('#syousai');
+    for(let n of data.results.shop) {
+      pi.textContent = (n.name);
+      pi.textContent = (n.access);
+      pi.textContent = (n.address);
+      pi.textContent = (n.open);
+      pi.textContent = (n.station_name);
+    }
+  
   
   
     // 通信開始
