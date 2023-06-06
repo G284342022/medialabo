@@ -218,7 +218,7 @@ function selectRe() {
     // URL を設定
     if (idx < 10) {
       let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G00' + idx + '.json';
-    }else {
+    }else if(idx >= 10) {
       let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0' + idx + '.json';
     }
     // 通信開始
