@@ -221,6 +221,13 @@ function selectRe() {
     }else {
       url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0' + idx + '.json';
     }
+    let n;
+  for(n of data.results) {
+    console.log(n);
+  }
+  for(let m of n.shop) {
+    console.log(m.access);
+  }
     // 通信開始
     axios.get(url)
         .then(showResult)   // 通信成功
@@ -230,14 +237,7 @@ function selectRe() {
 // 通信が成功した時の処理
 function showResult(resp) {
   let pi = document.querySelector('#keka');
-  let n;
-  for(n of data.results) {
-    console.log(n);
-  }
-  for(let m of n.shop) {
-    console.log(m.access);
-    pi.textContent(data.results);
-  }
+  pi.textContent(data.results);
     // サーバから送られてきたデータを出力
     let data = resp.data;
 
