@@ -214,11 +214,11 @@ function selectRe() {
     console.log('  value=' + o.getAttribute('value'));  // id 属性を表示
     console.log('  textContent='+o.textContent);
   let A = document.querySelectorAll('#option');
-  
+  idx = Number(idx)
     // URL を設定
     if (idx < 10) {
       let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G00' + idx + '.json';
-    }else if(idx >= 10) {
+    }else {
       let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0' + idx + '.json';
     }
     // 通信開始
