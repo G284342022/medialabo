@@ -228,7 +228,7 @@ function selectRe() {
         .then(finish);      // 通信の最後の処理
 }
 // 通信が成功した時の処理
-function showResult(resp) 
+function showResult(resp) {
   let pi = document.querySelector('#keka');
   let n;
   for(n of data.results) {
@@ -236,7 +236,8 @@ function showResult(resp)
   }
   for(let m of n.shop) {
     console.log(m.access);
-  pi.textContent(data.results);
+    pi.textContent(data.results);
+  }
     // サーバから送られてきたデータを出力
     let data = resp.data;
 
