@@ -222,15 +222,11 @@ function selectRe() {
       url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0' + idx + '.json';
     }
 
-    let data = url;
     
-    if (typeof data === 'string') {
-      data = JSON.parse(data);
-  }
     console.log(url);
 
     let pi = document.querySelector('#syousai');
-    for(let n of url.results.shop) {
+    for(let n of data.results.shop) {
       pi.textContent = 'ズバリ！これでしょう！';
 
       let p1 = document.createElement('li');
