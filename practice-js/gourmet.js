@@ -221,26 +221,63 @@ function selectRe() {
     }else {
       url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0' + idx + '.json';
     }
+
+
+    let data = url.data;
+
+    if (typeof data === 'string') {
+      data = JSON.parse(data);
+    }
+    
     let pi = document.querySelector('#syousai');
     for(let n of data.results.shop) {
-      pi.textContent = n.access;
-      pi.textContent = n.address;
-      pi.textContent = n.budget.name;
-      pi.textContent = n.catch;
-      pi.textContent = n.genre.name;
-      pi.textContent = n.name;
-      pi.textContent = n.open;
-      pi.textContent = n.station_name;
-      pi.textContent = n.sub_genre.name;
+      pi.textContent = 'ズバリ！これでしょう！';
+
+      let p1 = document.createElement('li');
+      p1.textContent = 'アクセス情報・・・ ' + n.access;
+      pi.insertAdjacentElement('afterend', p1);
+
+      let p2 = document.createElement('li');
+      p2.textContent = '住所・・・ ' + n.address;
+      pi.insertAdjacentElement('afterend', p2);
+
+      let p3 = document.createElement('li');
+      p3.textContent = '予算・・・ ' + n.budget.name;
+      pi.insertAdjacentElement('afterend', p3);
+
+      let p4= document.createElement('li');
+      p4.textContent = 'キャッチコピー・・・ ' + n.catch;
+      pi.insertAdjacentElement('afterend', p4);
+
+      let p5 = document.createElement('li');
+      p5.textContent = 'ジャンル・・・ ' + n.genre.name;
+      pi.insertAdjacentElement('afterend', p5);
+
+      let p6= document.createElement('li');
+      p6.textContent = '店舗名・・・ ' + n.name;
+      pi.insertAdjacentElement('afterend', p6);
+
+      let p7 = document.createElement('li');
+      p7.textContent = '営業時間・・・ ' + n.open;
+      pi.insertAdjacentElement('afterend', p7);
+
+      let p8 = document.createElement('li');
+      p8.textContent = '最寄駅・・・ ' + n.station_name;
+      pi.insertAdjacentElement('afterend', p8);
+
+      let p9 = document.createElement('li');
+      p9.textContent = 'サブジャンルの名前・・・ ' + n.sub_genre.name;
+      pi.insertAdjacentElement('afterend', p9);
     }
-  
-  
-  
-    // 通信開始
-    axios.get(url)
-        .then(showResult)   // 通信成功
-        .catch(showError)   // 通信失敗
-        .then(finish);      // 通信の最後の処理
+
+
+
+  // 通信開始
+  axios.get(url)
+  .then(showResult)   // 通信成功
+  .catch(showError)   // 通信失敗
+  .then(finish);      // 通信の最後の処理
+
 }
 // 通信が成功した時の処理
 function showResult(resp) {
