@@ -224,6 +224,11 @@ function selectRe() {
 
     
     console.log(url);
+    
+    let re = document.querySelectorAll('li');
+    for (let remo of re) {
+	    remo.remove();
+    }
 
     
 
@@ -253,7 +258,7 @@ let pi = document.querySelector('#syousai');
 
       let p1 = document.createElement('li');
       p1.textContent = 'アクセス情報・・・ ' + n.access;
-      pi.insertAdjacentElement('afterend', p1);
+      pi.insertAdjacentElement('beforeend', p1);
 
       let p2 = document.createElement('li');
       p2.textContent = '住所・・・ ' + n.address;
@@ -261,31 +266,31 @@ let pi = document.querySelector('#syousai');
 
       let p3 = document.createElement('li');
       p3.textContent = '予算・・・ ' + n.budget.name;
-      pi.insertAdjacentElement('afterend', p3);
+      pi.insertAdjacentElement('beforeend', p3);
 
       let p4= document.createElement('li');
       p4.textContent = 'キャッチコピー・・・ ' + n.catch;
-      pi.insertAdjacentElement('afterend', p4);
+      pi.insertAdjacentElement('beforeend', p4);
 
       let p5 = document.createElement('li');
       p5.textContent = 'ジャンル・・・ ' + n.genre.name;
-      pi.insertAdjacentElement('afterend', p5);
+      pi.insertAdjacentElement('beforeend', p5);
 
       let p6= document.createElement('li');
       p6.textContent = '店舗名・・・ ' + n.name;
-      pi.insertAdjacentElement('afterend', p6);
+      pi.insertAdjacentElement('beforeend', p6);
 
       let p7 = document.createElement('li');
       p7.textContent = '営業時間・・・ ' + n.open;
-      pi.insertAdjacentElement('afterend', p7);
+      pi.insertAdjacentElement('beforeend', p7);
 
       let p8 = document.createElement('li');
       p8.textContent = '最寄駅・・・ ' + n.station_name;
-      pi.insertAdjacentElement('afterend', p8);
+      pi.insertAdjacentElement('beforeend', p8);
 
       let p9 = document.createElement('li');
       p9.textContent = 'サブジャンルの名前・・・ ' + n.sub_genre.name;
-      pi.insertAdjacentElement('afterend', p9);
+      pi.insertAdjacentElement('beforeend', p9);
     }
     // data をコンソールに出力
     console.log(data);
