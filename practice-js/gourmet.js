@@ -225,7 +225,29 @@ function selectRe() {
     
     console.log(url);
 
-    let pi = document.querySelector('#syousai');
+    
+
+
+
+  // 通信開始
+  axios.get(url)
+  .then(showResult)   // 通信成功
+  .catch(showError)   // 通信失敗
+  .then(finish);      // 通信の最後の処理
+
+}
+// 通信が成功した時の処理
+function showResult(resp) {
+  
+ 
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
+
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+let pi = document.querySelector('#syousai');
     for(let n of data.results.shop) {
       pi.textContent = 'ズバリ！これでしょう！';
 
@@ -265,28 +287,6 @@ function selectRe() {
       p9.textContent = 'サブジャンルの名前・・・ ' + n.sub_genre.name;
       pi.insertAdjacentElement('afterend', p9);
     }
-
-
-
-  // 通信開始
-  axios.get(url)
-  .then(showResult)   // 通信成功
-  .catch(showError)   // 通信失敗
-  .then(finish);      // 通信の最後の処理
-
-}
-// 通信が成功した時の処理
-function showResult(resp) {
-  
- 
-    // サーバから送られてきたデータを出力
-    let data = resp.data;
-
-    // data が文字列型なら，オブジェクトに変換する
-    if (typeof data === 'string') {
-        data = JSON.parse(data);
-    }
-
     // data をコンソールに出力
     console.log(data);
 
